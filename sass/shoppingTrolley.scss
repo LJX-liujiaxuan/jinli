@@ -134,10 +134,90 @@ ul li{
 	padding-top: 70px;
 	padding-bottom: 40px;
 }
+.cart{
+    width: 1190px;
+    height: 60px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.carttt{
+    color: #333333;
+    font-size: 24px;
+    line-height: 60px;
+    float: left;
+}
+.carttt .cartimg{
+    float: left;
+    width: 35px;
+    height: 32px;
+    background: url(../img/1.png) no-repeat -453px -76px;
+    margin-top: 14px;
+    margin-right: 8px;
+}
+.jindu{
+    width: 375px;
+    height: 57px;
+    float: right;
+    margin-top: 6px;
+    margin-bottom: 4px;
+}
+.jindu .jinduimg{
+    display: block;
+    width: 375px;
+    height: 27px;
+    background: url(../img/1.png) no-repeat 0px -488px;
+    margin-left: 50px;
+}
+.jindu ul li{
+    color: #999999;
+    font-size: 14px;
+    line-height: 25px;
+    display: inline-block;
+    text-align: right;
+}
+.jindu ul li:nth-child(1){
+    width: 100px;
+    padding-right: 20px;
+}
+.jindu ul li:nth-child(2){
+    width: 108px;
+    padding-right: 12px;
+}
+.jindu ul li:nth-child(3){
+    width: 112px;
+    padding-right: 8px;
+}
 .trolley{
-//	width: ;
-//	height: ;
-	background: white;
+	width: 1190px;
+	background: pink;
+	margin: 0 auto;
+	padding-top: 110px;
+	padding-bottom: 130px;
+	margin-bottom: 16px;
+}
+.trolley p{
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    margin-bottom: 15px;
+}
+.trolley .go{
+    text-align: center;
+}
+.trolley .go a{
+    width: 120px;
+    height: 50px;
+    background: orangered;
+    color: white;
+    font-size: 18px;
+    line-height: 50px;
+}
+.zjll{
+    width: 1190px;
+    height: 400px;
+    background: pink;
+    margin: 0 auto;
 }
 
 /*ppdt*/
