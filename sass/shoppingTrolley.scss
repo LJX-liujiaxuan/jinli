@@ -129,7 +129,7 @@ ul li{
 }
 
 .main{
-	height: 1861px;
+//	height: 1861px;
 	background: #f1f1f1;
 	padding-top: 70px;
 	padding-bottom: 40px;
@@ -189,7 +189,7 @@ ul li{
 }
 .trolley{
 	width: 1190px;
-	background: pink;
+	background: white;
 	margin: 0 auto;
 	padding-top: 110px;
 	padding-bottom: 130px;
@@ -206,18 +206,53 @@ ul li{
     text-align: center;
 }
 .trolley .go a{
+    display: block;
     width: 120px;
     height: 50px;
-    background: orangered;
     color: white;
     font-size: 18px;
     line-height: 50px;
+    margin: 0 auto;
+    background: url(../img/gouwuche/bg.png) no-repeat 0px 0px;
+    
+}
+.trolley .go a:hover{
+    background: url(../img/gouwuche/bg.png) no-repeat 0px -50px;
 }
 .zjll{
     width: 1190px;
-    height: 400px;
-    background: pink;
+//  height: 400px;
+    background: white;
     margin: 0 auto;
+}
+.zjll p{
+    color: black;
+    font-size: 18px;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.zjll ul li{
+    display: inline-block;
+    width: 297px;
+    height: 394px;
+    padding: 20px 0;
+}
+.zjll ul li img{
+    width: 300px;
+    height: 300px;
+}
+.zjll ul li p{
+    width: 140px;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+.zjll ul li .zjlla{
+    color: #333333;
+    font-size: 12px;
+    background: pink;
 }
 
 /*ppdt*/
