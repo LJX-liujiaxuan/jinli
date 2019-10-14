@@ -2,8 +2,8 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>购物车页面</title>
-		<link rel="stylesheet" type="text/css" href="css/shoppingTrolley.css"/>
+		<title>手机列表页面</title>
+		<link rel="stylesheet" type="text/css" href="css/shouji.css"/>
 	</head>
 	<body>
 		<!--header-->
@@ -14,26 +14,42 @@
 						<span class="cc"></span>
 						<div id="gwcz" class="gwcz">
 							<span id="gg" class="gg">购物车(</span><span class="gg ww">0</span><span class="gg">)</span>
+							<div id="ggdiv" class="ggdiv">您的购物车是空的，快去挑选喜欢的商品吧！</div>
 						</div>
 					</a>
 				</div>
 				<div id="dl" class="dl">
-					<a href="#">amigo账号登录</a>
+					<a href="register.html">amigo账号登录</a>
 					<a href="login.html">原账号登录</a>
 					<a href="register.html">注册</a>
 				</div>
 			</div>
 			<div class="header2">
 				<a href="#"><div class="logo"></div></a>
+				<div class="menu">
+					<a href="#">首页</a>
+					<!--<div id="huaguodiv" class="huaguodiv">-->
+						<a class="huaguo" href="shouji.html">手机</a>
+					<!--</div>-->
+					<a href="#">配件</a>
+					<a href="#">服务</a>
+					<a href="#">下载</a>
+					<a href="#">amigoOS</a>
+				</div>
 				<div class="sousuo">
-					<input class="sousuocon" type="text" />
+					<input class="sousuocon" type="text" placeholder="请输入搜索内容" />
 					<a href="#"><div class="sousuoimg"></div></a>
 				</div>
 			</div>
+			
 		</div>
 		
+		<!--main-->
 		<div class="main">
-			
+			<!--banner-->
+				<div class="banner">
+					<a href="#"><img src="img/shouji/banner.jpg"/></a>
+				</div>
 		</div>
 		
 		<!--ppdt-->
@@ -171,3 +187,4 @@
 		</div>
 	</body>
 </html>
+<script src="js/shouji.js"></script>
