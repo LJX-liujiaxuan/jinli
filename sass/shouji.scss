@@ -177,17 +177,256 @@ ul li{
 .banner{
     width: 100%;
     height: 350px;
+    margin-bottom: 20px;
 }
 .banner img{
     width: 100%;
     height: 100%;
+    display: block;
+}
+.fenlei{
+    width: 100%;
+    overflow: hidden;
+    background: white;
+}
+.fenlei dl{
+    margin: 0px 20px;
+    padding: 13px 0px;
+    overflow: hidden;
+    border-bottom: 1px solid #DDDDDD;
+}
+.fenlei dl dt{
+    width: 78px;
+    height: 28px;
+    color: black;
+    font-size: 14px;
+    line-height: 28px;
+    float: left;
+}
+.fenlei dl .xuanze{
+    height: 28px;
+    float: left;
+}
+.fenlei dl dd a{
+    float: left;
+    margin-right: 20px;
+}
+.fenlei dd .gouxuan{
+    width: 14px;
+    height: 14px;
+    background: url(../img/shouji/newpartlst.png) no-repeat 0px -148px;
+    float: left;
+    margin-right: 4px;
+    position: relative;
+    top: 6px;
+}
+.fenlei dd .first{
+    background: url(../img/shouji/newpartlst.png) no-repeat 0px -134px;
+}
+.fenlei dd em{
+    color: #333333;
+    font-size: 14px;
+    line-height: 28px;
+    font-style: normal;
+    float: left;
+}
+.shangjia{
+    width: 10px;
+    height: 12px;
+    float: left;
+    background: url(../img/shouji/newpartlst.png) no-repeat -10px -12px;
+    position: relative;
+    top: 8px;
+    margin-right: 4px;
+}
+.jiage{
+    background: url(../img/shouji/newpartlst.png) no-repeat -10px -12px;
+}
+.xiaoliang{
+    background: url(../img/shouji/newpartlst.png) no-repeat -10px 0px;
+}
+.zaishou{
+    float: right;
+}
+.zaishou .gouxuan{
+    width: 14px;
+    height: 14px;
+    background: url(../img/shouji/newpartlst.png) no-repeat 0px -148px;
+    float: left;
+    margin-right: 4px;
+    position: relative;
+    top: 6px;
+}
+.zaishou em{
+    color: #333333;
+    font-size: 14px;
+    line-height: 28px;
+    font-style: normal;
+}
+.fenlei dl:last-child{
+    border-bottom: none;
+}
+
+//imglist
+.imglist{
+    width: 100%;
+//  height: 400px;
+    overflow: hidden;
+    border-top: 3px solid #DDDDDD;
+    background: #eee;
+}
+.imglist ul{
+    width: 100%;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.imglist ul li{
+    width: 296.7px;
+    height: 470px;
+    padding-bottom: 20px;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    float: left;
+    background: white;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.imglist ul li:nth-child(4n){
+    border-right: none;
+}
+.imglist ul li a{
+    width: 210px;
+    height: 350px;
+    padding-top: 30px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+.imglist ul li a img{
+    display: block;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 30px;
+    left: -44px;
+}
+.imglist .p1{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    right: 0px;
+    left: 0;
+}
+.imglist .p1 a{
+    display: inline;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 25px;
+    color: black;
+    padding: 0;
+}
+.imglist .p1 .miaoshu{
+    display: block;
+    color: #999999;
+    font-size: 14px;
+    font-weight: normal;
+}
+.imglist .p2{
+    width: 100%;
+    height: 27px;
+    position: absolute;
+    right: 0px;
+    bottom: 20px;
+}
+.p2 .xianjia{
+    color: #ef4222;
+    font-size: 18px;
+}
+.p2 .yuanjia{
+    color: #999999;
+    font-size: 14px;
+    margin-left: 20px;
+    text-decoration: line-through;
+}
+.yincang{
+    width: 100%;
+    height: 111px;
+    position: absolute;
+    bottom: -111px;
+    background: rgba(239,66,34,.9);
+}
+.yincang .yincangp{
+    color: white;
+    font-size: 14px;
+    line-height: 40px;
+}
+.yincang .yincanga{
+    display: block;
+    width: 112px;
+    height: 37px;
+    padding: 0;
+    color: #333333;
+    background: url(../img/1.png) no-repeat -391px -414px;
+    padding-right: 20px;
+    margin-top: 8px;
+}
+.imglist li:hover .p1 a{
+    color: #ef4222; 
+}
+.imglist li:hover .yincang{
+    bottom: 0px;
+    transition: all ease-in .5s;  
+}
+
+//dibu
+.dibu{
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 15px;
+    background: white;
+    line-height: 28px;
+    text-align: center;
+}
+.dibu span{
+    display: inline-block;
+    color: black;
+    font-size: 14px;
+    height: 28px;
+    margin-right: 4px;
+}
+.dibu .dibua{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+    color: black;
+    border: 1px solid #ddd;
+    margin-left: 3px;
+}
+.dibu .lasta{
+    display: inline-block;
+    padding: 0 6px;
+    height: 28px;
+    font-size: 14px;
+    color: black;
+    border: 1px solid #ddd;
+    margin-left: 3px;
+}
+.dibu a:hover{
+    color: #ef4222;
 }
 
 /*ppdt*/
+.ppdtmain{
+    width: 100%;
+    background: white;
+}
 .ppdt{
     width: 1192px;
     margin: 0 auto;
     overflow: hidden;
+    background: white;
 }
 .ppdt ul{
     /*display: block;*/
@@ -233,6 +472,7 @@ ul li{
 .ljmain{
     width: 100%;
     border-top: 1px solid #eaeaea;
+    background: white;
 }
 .lj{
     width: 1192px;
