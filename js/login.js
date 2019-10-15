@@ -15,6 +15,29 @@ window.onload=function(){
 		$("#mm").style.display="none";
 	}
 }
+$("#xyb").onclick=function(){
+	let xhr=new XMLHttpRequest();
+	xhr.open("post","php/loginCheck.php",true);
+	xhr.onreadystatechange=function(){
+		if(xhr.readyState==4 && xhr.status==200){
+			if(xhr.responseText=="1"){
+				addCookie("username",$("#dlminput").value,0);
+				location.href="index.html";
+			}else{
+				$("#dlm").innerHTML="亲，用户名或者密码不对";
+				$("#dlm").style=`
+					color: red;
+					display:block;
+					padding-left:0px;
+					background: none;
+				`;
+			}
+		}
+	}
+	xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	let sendstr = `username=${$("#dlminput").value}&userpass=${$("#mminput").value}`;
+	xhr.send(sendstr);
+}
 function testf(){
 	if($("#dlminput").value==""){
 		$("#dlm").innerHTML="登录名不能为空";

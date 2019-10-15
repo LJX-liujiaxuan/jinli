@@ -32,6 +32,11 @@ gulp.task("watchall",async()=>{
         .pipe(imagemin())
         .pipe(gulp.dest("D:\\phpStudy2016\\phpStudy\\WWW\\test\\jinli\\img"))
     })
+     //监听php
+     gulp.watch("php/**/*",async()=>{
+        gulp.src("php/**/*")
+        .pipe(gulp.dest("D:\\phpStudy2016\\phpStudy\\WWW\\test\\jinli\\php"))
+    })
 })
 
 //gulp.task("copy",function(){

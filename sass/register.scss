@@ -172,7 +172,7 @@ body{
 }
 .zc .zcinput1{
 	height: 37px;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 .zc .zcinput2{
 	width: 160px;
@@ -182,8 +182,14 @@ body{
 }
 .yzm{
 	float: left;
-	padding-left: 10px;
-	padding-top: 6px;
+	width: 65px;
+	height: 25px;
+	background-color: darkgrey;
+	margin-left: 4px;
+	margin-top: 6px;
+	color: black;
+	font-size: 16px;
+	line-height: 25px;
 }
 .hyg{
 	display: inline-block;
@@ -203,7 +209,7 @@ body{
 	color: white;
 	font-size: 16px;
 	line-height: 46px;
-	margin-top: 144px;
+	margin-top: 66px;
 	margin-left: 31px;
 }
 
@@ -235,6 +241,14 @@ body{
     top: 9px;
 }
 #yzmpd{
-    top: 78px;
+    top: 157px;
     right: 152px;
+}
+#mimapd{
+    top: 58px;
+    right: 36px;
+}
+#qrpd{
+    top: 108px;
+    right: 36px;
 }
