@@ -214,5 +214,27 @@ body{
 	opacity: 0;
 	/*display: none;*/	
 }
-
-
+.tishi{
+    display: block;
+    color: red;
+    font-size: 14px;
+    position: absolute;
+    left: 28px;
+    top: -28px;
+    display: none;
+}
+.mmpd{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 83px;
+    right: 37px;
+    display: none;
+}
+#sjhpd{
+    top: 9px;
+}
+#yzmpd{
+    top: 78px;
+    right: 152px;
+}

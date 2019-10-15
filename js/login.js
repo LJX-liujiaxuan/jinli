@@ -1,5 +1,5 @@
 window.onload=function(){
-		$("#dlminput").onfocus=function(){
+	$("#dlminput").onfocus=function(){
 		$("#dlm").innerHTML="请输入登录名或手机号登录";
 		$("#dlm").style=`
 			color: #B2B2B2;

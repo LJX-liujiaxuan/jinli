@@ -220,6 +220,12 @@ ul li{
     position: relative;
     top: 6px;
 }
+.fenlei dl a:hover em{
+    color: #ef4222;
+}
+.xuanze a:hover .xz{
+    color: #333333;
+}
 .fenlei dd .first{
     background: url(../img/shouji/newpartlst.png) no-repeat 0px -134px;
 }
@@ -274,6 +280,7 @@ ul li{
     overflow: hidden;
     border-top: 3px solid #DDDDDD;
     background: #eee;
+    position: relative;
 }
 .imglist ul{
     width: 100%;
@@ -378,6 +385,20 @@ ul li{
     bottom: 0px;
     transition: all ease-in .5s;  
 }
+.shoufa{
+    display: block;
+    width: 42px;
+    height: 90px;
+    background: url(../img/shouji/shoufa.png);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 3;
+}
+.remai{
+    background: url(../img/shouji/remai.png);
+}
+
 
 //dibu
 .dibu{

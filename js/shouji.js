@@ -32,36 +32,6 @@ hh("#gwc").onmouseleave=function(){
 //  	bottom: "-111px"
 // 	}, 200 );
 //});
-//$(".li2").mouseenter(function(){
-//	$(".yc2").animate({ 
-//  	bottom: "0px"
-// 	}, 400 );
-//});
-//$(".li2").mouseleave(function(){
-//	$(".yc2").animate({ 
-//  	bottom: "-111px"
-// 	}, 200 );
-//});
-//$(".li3").mouseenter(function(){
-//	$(".yc3").animate({ 
-//  	bottom: "0px"
-// 	}, 400 );
-//});
-//$(".li3").mouseleave(function(){
-//	$(".yc3").animate({ 
-//  	bottom: "-111px"
-// 	}, 200 );
-//});
-//$(".li4").mouseenter(function(){
-//	$(".yc4").animate({ 
-//  	bottom: "0px"
-// 	}, 400 );
-//});
-//$(".li4").mouseleave(function(){
-//	$(".yc4").animate({ 
-//  	bottom: "-111px"
-// 	}, 200 );
-//});
 
 //$(function() {
 //  $(".imglistli").on("mouseover", function() {
@@ -76,6 +46,21 @@ hh("#gwc").onmouseleave=function(){
 //  })
 //})  
 
+//在售商品勾选
+let panduan=true;
+hh("#zaishou").onclick=function(){
+	if(panduan){
+		hh("#gouxuan").style=`
+			background-position: 0px -134px;
+		`;
+		panduan=false;
+	}else{
+		hh("#gouxuan").style=`
+			background-position: 0px -148px;
+		`;
+		panduan=true;
+	}
+}
 
 function hh(str){
 	if(str[0]=="#"){
