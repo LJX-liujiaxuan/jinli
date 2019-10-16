@@ -168,7 +168,7 @@ ul li{
 .main{
     width: 100%;
     overflow: hidden;
-    background: #f1f1f1;
+//  background: #f1f1f1;
     .nav{
         width: 100%;
         background: #f1f1f1;
@@ -232,7 +232,53 @@ ul li{
             }
         }
     }
-    
+    .cscon{
+        width: 980px;
+        margin: 0 auto;
+        padding-top: 105px;
+        h1{
+            color: #303030;
+            font-size: 38px;
+            line-height: 56px;
+            font-weight: normal;
+            padding: 0 10px 15px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        .list{
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f1f1f1;
+            h5{
+                color: #4c4c4c;
+                font-size: 16px;
+                line-height: 34px;
+                padding: 10px;
+            }
+            .left{
+                display: inline-block;
+                width: 140px;
+                padding: 10px;
+                p{
+                    color: #4c4c4c;
+                    font-size: 13px;
+                    line-height: 19px;
+                    margin-bottom: 30px;
+                }
+                .pinduan{
+                    padding: 67px 0;
+                }
+            }
+            .right{
+                display: inline-block;
+                padding-top: 10px;
+                p{
+                    color: #4c4c4c;
+                    font-size: 13px;
+                    line-height: 19px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
     
     
 }

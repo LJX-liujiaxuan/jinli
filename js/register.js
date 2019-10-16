@@ -177,7 +177,7 @@ $("#mimaqr").onfocus=function(){
 }
 $("#yzm").onfocus=function(){
 	setInterval(()=>{
-        let mm=$("#yzm").value;
+       	let mm=$("#yzm").value;
 		if(mm==str){
 			$("#yzmpd").src="img/register/correct.png";
 			$("#yzmpd").style.display="block";
@@ -194,7 +194,7 @@ function yanzhengma(){
 	str="";
 	for(let i=0;i<4;i++){
 		let index=parseInt(Math.random()*10);
-		str=str+index+" ";
+		str+=index;
 	}
 	$("#hygspan").innerHTML=str;
 	$("#hygspan").style.backgroundColor = giveColor();
