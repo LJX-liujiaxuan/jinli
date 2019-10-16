@@ -1,26 +1,27 @@
 //购物车下拉菜单
-$("#gwc").onmouseenter=function(){
-	$("#gwc").style=`
+hh("#gwc").onmouseenter=function(){
+	hh("#gwc").style=`
 		border-left:1px solid #e7e7e7;
 		border-right:1px solid #e7e7e7;
 	`;
-	$("#dl").style=`
+	hh("#dl").style=`
 		border-bottom:1px solid #e7e7e7;
 	`;
-	$("#ggdiv").style.display="block";
+	hh("#ggdiv").style.display="block";
 }
-$("#gwc").onmouseleave=function(){
-	$("#gwc").style=`
+hh("#gwc").onmouseleave=function(){
+	hh("#gwc").style=`
 		border-left:none;
 		border-right:none;
 	`;
-	$("#dl").style=`
+	hh("#dl").style=`
 		border-bottom:none;
 	`;
-	$("#ggdiv").style.display="none";
+	hh("#ggdiv").style.display="none";
 }
 
-function $(str){
+
+function hh(str){
 	if(str[0]=="#"){
 		return document.getElementById(str.substring(1));
 	}else if(str[0]=="."){
@@ -29,3 +30,19 @@ function $(str){
 		return document.getElementsByTagName(str);
 	}
 }
+
+//导航栏吸顶
+$(function () {
+    var ie6 = document.all;
+    var dv = $('.nav'), st;
+    dv.attr('otop', dv.offset().top); //存储原来的距离顶部的距离
+    $(window).scroll(function () {
+        st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
+        if (st > parseInt(dv.attr('otop'))) {
+            if (ie6) {//IE6不支持fixed属性，所以只能靠设置position为absolute和top实现此效果
+                dv.css({ position: 'absolute', top: 0});
+            }
+            else if (dv.css('position') != 'fixed') dv.css({ 'position': 'fixed', top: 0 ,'padding-top':'10px'});
+        } else if (dv.css('position') != 'static') dv.css({ 'position': 'static' ,'padding-top':'40px'});
+    });
+});

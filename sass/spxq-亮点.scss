@@ -2,9 +2,9 @@ body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,hr,td,input,textarea{
     margin:0;
     padding:0;
 }
-body{
-    background: #f1f1f1;
-}
+//body{
+//  background: #f1f1f1;
+//}
 a{
     text-decoration: none;
 }
@@ -15,13 +15,12 @@ ul li{
 /*header*/
 .header{
     width: 100%;
-    border-bottom: 3px solid #cccccc;
-    position: sticky;
-    left: 0;
-    top: 0;
-    z-index: 5;
+    border-bottom: 1px solid #cccccc;
+//  position: sticky;
+//  left: 0;
+//  top: 0;
+//  z-index: 5;
     background: white;
-    /*position: relative;*/
 }
 .header1{
     width: 1191px;
@@ -169,15 +168,143 @@ ul li{
 .main{
     width: 100%;
     overflow: hidden;
+    background: #f1f1f1;
     .nav{
         width: 100%;
-        height: 85px;
+        background: #f1f1f1;
+        height: 45px;
+        padding-top: 40px;
         .navmain{
             width: 1190px;
             height: 45px;
-            background: pink;
             margin: 0 auto;
-            margin-top: 40px;
+            h1{
+                color: #fc6506 ;
+                font-size: 23px;
+                line-height: 45px;
+                float: left;
+            }
+            ul{
+                float: right;
+               li{
+                   float: left;
+                   a{
+                       display: block;
+                       width: 90px;
+                       height: 42px;
+                       color: #222222;
+                       font-size: 16px;
+                       line-height: 42px;
+                       text-align: center;
+                       border: 1px solid #dddddd;
+                   }
+                   .liangdian{
+                       color: #ff6900;
+                       border-top: 2px solid #ef4222;
+                       background: white;
+                   }
+                   .canshu{
+                       border-left: none;
+                       border-right: none;
+                   }
+               } 
+            }
+            span{
+                color: #ff6900;
+                font-size: 30px;
+                float: right;
+                margin-left: 6px;
+                margin-right: 20px;
+                margin-top: 2px;
+            }
+            .ljgm{
+                display: block;
+                width: 108px;
+                height: 40px;
+                color: white;
+                font-size: 14px;
+                text-align: center;
+                line-height: 40px;
+                float: right;
+                background: #fc6506;
+                border-radius: 4px;
+                margin-top: 2px;
+            }
+        }
+    }
+    .ldcon{
+        width: 100%;
+        overflow: hidden;
+        
+        .img1{
+        width: 100%;
+        height: 960px;
+        background: url(../img/spxq/index_01.jpg) center;
+        }
+        .img2{
+            width: 100%;
+            height: 1486px;
+            background: url(../img/spxq/index_02.jpg) center center;
+        }
+        .img3{
+            width: 100%;
+            height: 954px;
+            background: url(../img/spxq/index_03.jpg) center;
+        }
+        .img4{
+            width: 100%;
+            height: 948px;
+            background: url(../img/spxq/index_04.jpg) center;
+        }
+        .img5{
+            width: 100%;
+            height: 1907px;
+            background: url(../img/spxq/index_05.jpg) center;
+        }
+        .img6{
+            width: 100%;
+            height: 949px;
+            background: url(../img/spxq/index_06.jpg) center;
+        }
+        .img7{
+            width: 100%;
+            height: 950px;
+            background: url(../img/spxq/index_07.jpg) center;
+        }
+        .img8{
+            width: 100%;
+            height: 949px;
+            background: url(../img/spxq/index_08.jpg) center;
+        }
+        .img9{
+            width: 100%;
+            height: 945px;
+            background: url(../img/spxq/index_09.jpg) center;
+        }
+        .img10{
+            width: 100%;
+            height: 1800px;
+            background: url(../img/spxq/index_10.jpg) center;
+        }
+        .img11{
+            width: 100%;
+            height: 950px;
+            background: url(../img/spxq/index_11.jpg) center;
+        }
+        .img12{
+            width: 100%;
+            height: 1600px;
+            background: url(../img/spxq/index_12.jpg) center;
+        }
+        .img13{
+            width: 100%;
+            height: 950px;
+            background: url(../img/spxq/index_13_02.jpg) center;
+        }
+        .img14{
+            width: 100%;
+            height: 400px;
+            background: url(../img/spxq/index_14.jpg) center;
         }
     }
 }
@@ -194,7 +321,7 @@ ul li{
     /*display: block;*/
     width: 100%;
     height: 47px;
-    padding-top: 76px;
+    padding-top: 42px;
     padding-bottom: 42px;
     clear: both;
 }

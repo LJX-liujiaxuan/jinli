@@ -54,8 +54,8 @@
 			<a href="#">menu32</a>
 		</div>
 	</li>
-</ul>-->
-<!doctype html>
+</ul>
+<!--<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -118,6 +118,163 @@ $("#list").on("mouseenter", "li", function(event){
     $(this).addClass("sel").siblings().removeClass("sel");
     $("#box div").hide().eq($(this).index()).show();
 });
+</script>
+</body>
+</html>-->
+	
+	<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body {
+        text-align: center;
+    }
+    #wrap {
+        width: 200px;height: 200px;border: 1px solid black;text-align: center;
+        margin: 10px auto;font-size: 30px;
+    }
+    button {
+        width: 150px;height: 40px;color: black;text-align: center;
+        margin: 10px;
+    }
+    </style>
+</head>
+<body>
+    <button id="btn1">change bgcolor</button><br>
+    <button id="btn2">change color</button>
+    <div id="wrap">
+        test text
+    </div>
+
+    <script>
+    var btn1 = document.getElementById("btn1");
+    var btn2 = document.getElementById("btn2");
+    var wrap = document.getElementById("wrap");
+    // 获取元素
+
+    function getColor(){
+        // 封装随机生成颜色的函数作为返回值
+        return Math.round(Math.random()*255);
+    }
+
+    function giveColor(){
+        var red = getColor();
+        var green = getColor();
+        var blue = getColor();
+        // 获取三个rgb的值
+        var color= "rgb(" + red + "," + green + "," + blue + ")";
+        // 吧rhb值拼接在一起给变量color
+        return color;
+        // 返回color
+    }
+
+    btn1.onclick = function(){
+        wrap.style.backgroundColor = giveColor();
+        // btn1注册点击时间，改变wrap的背景色
+    }
+
+    btn2.onclick = function(){
+        wrap.style.color = giveColor();
+        // btn1注册点击时间，改变wrap的字体颜色
+    }
+
+    </script>
+</body>
+</html>-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0,user-scalable=no;"/>  
+<title>无标题文档</title>
+<script type="text/javascript" src="js/jq_nav_gd.js"></script>
+</head>
+<body style="margin:0px;">
+<div style="height:300px;background:#e0e0e0">
+这里放你的那个图片
+</div>
+<div id="fixedMenu_keleyi_com" style="background:#ffffff;width:100%; height:50px;">
+这里面放你的导航条
+</div>
+<div style="height:2600px;background:#999;">
+<p>这里面放你的正文内容</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>这里面放你的正文内容</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>这里面放你的正文内容</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>这里面放你的正文内容</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>这里面放你的正文内容</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>这里面放你的正文内容</p>
+</div>
+<script src="js/jquery-1.8.3.min.js" type="text/javascript">
+	
+</script>
+<script type="text/javascript">
+    $(function () {
+        var ie6 = document.all;
+        var dv = $('#fixedMenu_keleyi_com'), st;
+        dv.attr('otop', dv.offset().top); //存储原来的距离顶部的距离
+        $(window).scroll(function () {
+            st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
+            if (st > parseInt(dv.attr('otop'))) {
+                if (ie6) {//IE6不支持fixed属性，所以只能靠设置position为absolute和top实现此效果
+                    dv.css({ position: 'absolute', top: 0});
+                }
+                else if (dv.css('position') != 'fixed') dv.css({ 'position': 'fixed', top: 0 });
+            } else if (dv.css('position') != 'static') dv.css({ 'position': 'static' });
+        });
+    });
 </script>
 </body>
 </html>

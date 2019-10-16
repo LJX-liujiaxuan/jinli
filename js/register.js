@@ -194,30 +194,28 @@ function yanzhengma(){
 	str="";
 	for(let i=0;i<4;i++){
 		let index=parseInt(Math.random()*10);
-		str+=index;
+		str=str+index+" ";
 	}
-	let strColor=yanSeString();
 	$("#hygspan").innerHTML=str;
-//	$("#hygspan").style.backgroundColor=strColor;
+	$("#hygspan").style.backgroundColor = giveColor();
+	$("#hygspan").style.color = giveColor();
 }
 $("#hyg").onclick=function(){
 	yanzhengma();
 }
-//随机颜色字符串
-function yanSeString(){
-	var arr=[];
-	for(var i=97;i<=122;i++){
-		arr.push(String.fromCharCode(i));
-	}
-	for(var i=0;i<10;i++){
-		arr.push(i);
-	}
-	var str="#";
-	for(var i=0;i<6;i++){
-		var index=parseInt(Math.random()*arr.length);
-		str+=arr[index];
-	}
-	return str;
+function getColor(){
+    // 封装随机生成颜色的函数作为返回值
+    return Math.round(Math.random()*255);
+}
+function giveColor(){
+    var red = getColor();
+    var green = getColor();
+    var blue = getColor();
+    // 获取三个rgb的值
+    var color= "rgb(" + red + "," + green + "," + blue + ")";
+    // 吧rhb值拼接在一起给变量color
+    return color;
+    // 返回color
 }
 
 //function checkuser(obj){
