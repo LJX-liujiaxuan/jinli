@@ -46,3 +46,28 @@ $(function () {
         } else if (dv.css('position') != 'static') dv.css({ 'position': 'static' ,'padding-top':'40px'});
     });
 });
+
+$(function(){
+	var mySwiper = new Swiper ('.swiper-container', {
+//		autoplay:true,
+	    pagination: {
+	      	el: '.swiper-pagination',
+	      	clickable: true,
+	    },
+	    navigation: {
+	     	nextEl: '.swiper-button-next',
+	     	prevEl: '.swiper-button-prev',
+	    },
+	    keyboard: {
+		 	enabled: true,
+		}, 
+	})     
+})
+
+//购物车弹出
+hh("#shitanchu").onclick=function(){
+	hh("#tanchu").style.display="block";
+}
+hh("#tuichu").onclick=function(){
+	hh("#tanchu").style.display="none";
+} 

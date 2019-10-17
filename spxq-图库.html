@@ -50,7 +50,7 @@
 			<div class="nav">
 				<div class="navmain">
 					<h1>金立S11</h1> 
-					<a class="ljgm" href="#">立即购买</a>
+					<a id="shitanchu" class="ljgm" href="#">立即购买</a>
 					<span>￥1899</span>
 					<ul>
 						<li><a id="liangdian" class="liangdian" href="spxq-亮点.html">亮点</a></li>
@@ -62,22 +62,22 @@
 			<div class="tkcon">
 				<div class="swiper-container ">
 			    <div class="swiper-wrapper">
-			        <div class="swiper-slide" style="background: black;">1</div>
-			        <div class="swiper-slide">Slide 2</div>
-			        <div class="swiper-slide">Slide 3</div>
-			        <div class="swiper-slide">Slide 4</div>
-			        <div class="swiper-slide">Slide 5</div>
-			        <div class="swiper-slide">Slide 6</div>
-			        <div class="swiper-slide">Slide 7</div>
-			        <div class="swiper-slide">Slide 8</div>
-			        <div class="swiper-slide">Slide 9</div>
-			        <div class="swiper-slide">Slide 10</div>
-			        <div class="swiper-slide">Slide 11</div>
-			        <div class="swiper-slide">Slide 12</div>
-			        <div class="swiper-slide">Slide 13</div>
-			        <div class="swiper-slide">Slide 14</div>
-			        <div class="swiper-slide">Slide 15</div>
-			    </div>
+			        <div class="swiper-slide"><img src="img/spxq/mini_1.jpg" /></div>
+			        <div class="swiper-slide"><img src="img/spxq/mini_2.jpg" /></div>
+			        <div class="swiper-slide"><img src="img/spxq/mini_3.jpg" /></div>
+			        <div class="swiper-slide"><img src="img/spxq/mini_4.jpg" /></div>
+			        <div class="swiper-slide"><img src="img/spxq/mini_5.jpg" /></div>
+			        <div class="swiper-slide"><img src="img/spxq/mini_6.jpg" /></div>
+			        <div class="swiper-slide"><img src="img/spxq/mini_7.jpg" /></div>
+			        <div class="swiper-slide"><img src="img/spxq/mini_8.jpg" /></div>
+			        <div class="swiper-slide"><img src="img/spxq/mini_9.jpg" /></div>
+			        <div class="swiper-slide"><img src="img/spxq/mini_10.jpg" /></div>
+			        <div class="swiper-slide"><img src="img/spxq/mini_11.jpg" /></div>
+			        <div class="swiper-slide"><img src="img/spxq/mini_12.jpg" /></div>
+			        <div class="swiper-slide"><img src="img/spxq/mini_13.jpg" /></div>
+			        <div class="swiper-slide"><img src="img/spxq/mini_14.jpg" /></div>
+			        <div class="swiper-slide"><img src="img/spxq/mini_15.jpg" /></div>
+			    </div> 
 			    <!-- 如果需要分页器 -->
 			    <div class="swiper-pagination"></div>
 			    
@@ -88,6 +88,51 @@
 			</div>
 			</div>
 		</div>
+		<div id="tanchu" class="tanchucon">
+			<div class="tanchu">
+				<a id="tuichu" href="#"><img src="img/spxq/closeFix.png"/></a>
+				<div class="left">
+					<img src="img/spxq/mask2.jpg"/>
+				</div>
+				<div class="right">
+					<h1>欢迎购买金立S11</h1>
+					<div class="leixing">S11</div>
+					<h3>颜色选择</h3>
+					<p>
+						<a href="#">
+							<span class="jin"></span>
+							太空金
+						</a>
+					</p>
+					<p class="middle">
+						<a href="#">
+							<span class="lan"></span>
+							月光蓝
+						</a>
+					</p> 
+					<p>
+						<a href="#">
+							<span class="fen"></span>
+							樱花粉
+						</a>
+					</p>
+					<h3 class="bb">版本选择</h3>
+					<div class="banben">全网通 4G内存+64G容量</div>
+					<div class="jiage">
+						<span class="shuliang">数量</span>
+						<span id="jian" class="jian">-</span>
+						<input class="num" id="num" type="text" value="1"/>
+						<span id="jia" class="jia">+</span>
+						<div class="zj"> 
+							总价： 
+							<span class="zongjia">1899</span>
+						</div>
+						<a id="goumai" class="goumai" href="#">立即购买</a>
+					</div>
+				</div>
+			</div> 
+		</div>
+		
 		
 		<!--ppdt-->
 		<div class="ppdt">
@@ -226,42 +271,6 @@
 	</body>
 </html>
 <script src="js/jquery-1.8.3.min.js"></script>
-<script src="js/spxq.js"></script>
 <script src="https://unpkg.com/swiper/js/swiper.min.js"> </script>
-<script>        
-  	var mySwiper = new Swiper ('.swiper-container', {
-	    loop: true, // 循环模式选项
-	    
-	    // 如果需要分页器
-	    pagination: {
-	      el: '.swiper-pagination',
-	    },
-	    
-	    // 如果需要前进后退按钮
-	    navigation: {
-	      nextEl: '.swiper-button-next',
-	      prevEl: '.swiper-button-prev',
-	    },
-	    
-	    // 如果需要滚动条
-	    scrollbar: {
-	      el: '.swiper-scrollbar',
-	    },
-  })        
-</script>
-<!--var swiper = new Swiper('.swiper-container-detail', {
-    // spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: '.swiper-pagination-detail',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next-detail',
-        prevEl: '.swiper-button-prev-detail',
-    },
-});-->
+<script src="js/spxq.js"></script>
+

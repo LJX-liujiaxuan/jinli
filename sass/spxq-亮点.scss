@@ -308,6 +308,190 @@ ul li{
         }
     }
 }
+//tanchu
+.tanchucon{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: rgba(106,101,101,0.8); 
+    z-index: 10;
+    display: none;
+}
+.tanchu{
+    width: 950px;
+    height: 680px;
+    background: white;
+    margin: 0 auto;
+    a{
+        display: block;
+        margin-top: 10px;
+        margin-right: 10px;
+        float: right;
+    }
+    .left{
+        float: left;
+        clear: both;
+        padding-top: 60px;
+        img{
+            height: 480px;
+        }
+    }
+    .right{
+        width: 470px;
+        height: 542px;
+        float: right;
+        margin-top: 40px;
+        position: relative;
+        right: 20px;
+        top: 0;
+        h1{
+            color: black;
+            font-size: 24px;
+            line-height: 24px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        .leixing{
+            width: 202px;
+            height: 47px;
+            color: black;
+            font-size: 20px;
+            line-height: 47px;
+            text-align: center;
+            border: 1px solid #ff6a00;
+        }
+        h3{
+            font-size: 18px;
+            line-height: 27px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        p{
+            width: 150px;
+            height: 47px;
+            font-size: 18px;
+            line-height: 47px;
+            float: left;
+            border: 1px solid #5b5b5b;
+            overflow: hidden;
+            a{
+                line-height: 18px;
+                margin-right: 35px;
+                color: #333333;
+                span{
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    position: relative;
+                    top: 5px;
+                }
+                .jin{
+                    background: #e9e0a5;
+                }
+                .lan{
+                    background: #0153a0;
+                }
+                .fen{
+                    background: #e98a9e;
+                }
+            }
+        }
+        .middle{
+            margin: 0 6px; 
+            border: 1px solid #ff6a00;
+        }
+        .bb{
+            clear: both;
+            font-size: 18px;
+            line-height: 27px;
+            padding-top: 25px;
+            margin-bottom: 20px;
+        }
+        .banben{
+            width: 202px;
+            height: 47px;
+            font-size: 15px;
+            line-height: 47px;
+            text-align: center;
+            border: 1px solid #ff6a00;
+        }
+        .jiage{
+            padding-top: 55px;
+            .shuliang{
+                display: inline-block;
+                color: #333333;
+                font-size: 18px;
+                width: 36px;
+                height: 30px;
+                padding-right: 7px;
+            }
+            .jian{
+               display: inline-block;
+               width: 10px;
+               height: 10px;
+               color: #333333;
+               background: #BBBBBB;
+               font-size: 12px;
+               margin-top: 7px;
+               cursor: pointer;
+               text-align: center;
+               line-height: 8px;
+               border: 1px solid #CCCCCC;
+            }
+            .num{
+                display: inline-block;
+                border: 1px #6a6a6a solid;
+                margin: 0 14px;
+                line-height: 19px;
+                text-align: center;
+                color: #333;
+                width: 27px;
+                height: 27px;
+                background: #FFFFFF;            }
+            .jia{
+               display: inline-block;
+               width: 10px;
+               height: 10px;
+               color: #333333;
+               background: #BBBBBB;
+               font-size: 12px;
+               margin-top: 7px;
+               cursor: pointer;
+               text-align: center;
+               line-height: 8px;
+               border: 1px solid #CCCCCC;
+            }
+            .zj{
+                display: inline-block;
+                line-height: 39px;
+                font-size: 15px;
+                margin-left: 60px;
+                .zongjia{
+                    color: #fc6506;
+                    font-size: 26px;
+                    line-height: 30px;
+                }
+            } 
+            .goumai{
+                display: block;
+                width: 300px;
+                height: 47px;
+                background: #fc6506;
+                color: #FFFFFF;
+                font-size: 22px;
+                line-height: 47px;
+                text-align: center;
+                float: left;
+            }
+        }
+    }
+}
 
 
 
