@@ -234,8 +234,13 @@ ul li{
     }
     .tkcon{
         width: 100%;
-        height: 400px;
-        background: skyblue;
+//      height: 400px;
+//      background: skyblue;
+        
+        .swiper-container {
+            width: 100%;
+            height: 300px;
+        } 
     }
     
     

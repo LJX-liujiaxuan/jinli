@@ -4,6 +4,8 @@
 		<meta charset="UTF-8">
 		<title>商品详情页-图库</title>
 		<link rel="stylesheet" type="text/css" href="css/spxq-图库.css"/>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"> 
+
 	</head>
 	<body>
 		<!--header-->
@@ -58,7 +60,32 @@
 				</div>
 			</div>
 			<div class="tkcon">
-				
+				<div class="swiper-container ">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide" style="background: black;">1</div>
+			        <div class="swiper-slide">Slide 2</div>
+			        <div class="swiper-slide">Slide 3</div>
+			        <div class="swiper-slide">Slide 4</div>
+			        <div class="swiper-slide">Slide 5</div>
+			        <div class="swiper-slide">Slide 6</div>
+			        <div class="swiper-slide">Slide 7</div>
+			        <div class="swiper-slide">Slide 8</div>
+			        <div class="swiper-slide">Slide 9</div>
+			        <div class="swiper-slide">Slide 10</div>
+			        <div class="swiper-slide">Slide 11</div>
+			        <div class="swiper-slide">Slide 12</div>
+			        <div class="swiper-slide">Slide 13</div>
+			        <div class="swiper-slide">Slide 14</div>
+			        <div class="swiper-slide">Slide 15</div>
+			    </div>
+			    <!-- 如果需要分页器 -->
+			    <div class="swiper-pagination"></div>
+			    
+			    <!-- 如果需要导航按钮 -->
+			    <div class="swiper-button-prev"></div>
+			    <div class="swiper-button-next"></div>
+			    
+			</div>
 			</div>
 		</div>
 		
@@ -195,7 +222,46 @@
 				<span>金立关怀</span>
 			</div>
 		</div>
+	
 	</body>
 </html>
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/spxq.js"></script>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"> </script>
+<script>        
+  	var mySwiper = new Swiper ('.swiper-container', {
+	    loop: true, // 循环模式选项
+	    
+	    // 如果需要分页器
+	    pagination: {
+	      el: '.swiper-pagination',
+	    },
+	    
+	    // 如果需要前进后退按钮
+	    navigation: {
+	      nextEl: '.swiper-button-next',
+	      prevEl: '.swiper-button-prev',
+	    },
+	    
+	    // 如果需要滚动条
+	    scrollbar: {
+	      el: '.swiper-scrollbar',
+	    },
+  })        
+</script>
+<!--var swiper = new Swiper('.swiper-container-detail', {
+    // spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination-detail',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next-detail',
+        prevEl: '.swiper-button-prev-detail',
+    },
+});-->
