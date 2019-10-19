@@ -16,27 +16,27 @@ window.onload=function(){
 	}
 }
 $("#xyb").onclick=function(){
-	let xhr=new XMLHttpRequest();
-	xhr.open("post","php/loginCheck.php",true);
-	xhr.onreadystatechange=function(){
-		if(xhr.readyState==4 && xhr.status==200){
-			if(xhr.responseText=="1"){
-				addCookie("username",$("#dlminput").value,0);
-				location.href="index.html";
-			}else{
-				$("#dlm").innerHTML="亲，用户名或者密码不对";
-				$("#dlm").style=`
-					color: red;
-					display:block;
-					padding-left:0px;
-					background: none;
-				`;
-			}
+	let sendstr=`username=${$("#dlminput").value}&userpass=${$("#mminput").value}`;
+	ajax1908Promise({
+		"method":"post",
+		"url":"php/loginCheck.php",
+		"datas":sendstr,
+	}).then(function(str){
+		if(str=="1"){
+			addCookie("username",$("#dlminput").value,10);
+			location.href="index.html";
+		}else{
+			$("#dlm").innerHTML="亲，用户名或者密码不对";
+			$("#dlm").style=`
+				color: red;
+				display:block;
+				padding-left:0px;
+				background: none;
+			`;
 		}
-	}
-	xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	let sendstr = `username=${$("#dlminput").value}&userpass=${$("#mminput").value}`;
-	xhr.send(sendstr);
+	},function(){
+		$("#dlm").innerHTML="亲，服务器开小差了......";
+	});
 }
 function testf(){
 	if($("#dlminput").value==""){

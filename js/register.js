@@ -55,7 +55,7 @@ $("#ljdl").onclick=function(){
 	
 	let shijian;
 	if(panduan){
-		shijian=0;
+		shijian=1;
 	}else{
 		shijian=10;
 	}
@@ -109,6 +109,10 @@ $("#xyb").onclick=function(){
 	if($("#yzm").value==""){
 		$("#tishi2").innerHTML="请输入图形验证码";
 		$("#tishi2").style.display="block";
+		return false;
+	}
+	let lj="http://localhost/test/jinli/img/register/delete.png";
+	if($("#sjhpd").src==lj || $("#mimapd").src==lj || $("#qrpd").src==lj){
 		return false;
 	}
 	
@@ -166,7 +170,9 @@ $("#mimaqr").onfocus=function(){
 	setInterval(()=>{
         let mm=$("#mimaqr").value;
         let mima=$("#mima").value;
-        if(mm==mima){
+        if(mm.length==0){
+        	$("#qrpd").style.display="none";
+        }else if(mm==mima){
 			$("#qrpd").src="img/register/correct.png";
 			$("#qrpd").style.display="block";
 		}else{
@@ -178,7 +184,9 @@ $("#mimaqr").onfocus=function(){
 $("#yzm").onfocus=function(){
 	setInterval(()=>{
        	let mm=$("#yzm").value;
-		if(mm==str){
+		if(mm.length==0){
+        	$("#yzmpd").style.display="none";
+        }else if(mm==str){
 			$("#yzmpd").src="img/register/correct.png";
 			$("#yzmpd").style.display="block";
 		}else{

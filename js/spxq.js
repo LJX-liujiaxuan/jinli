@@ -20,6 +20,27 @@ hh("#gwc").onmouseleave=function(){
 	hh("#ggdiv").style.display="none";
 }
 
+let danjia=hh("#zongjia").innerHTML;
+console.log(danjia);
+//总价计算
+hh("#jia").onclick=function(){
+	if(hh("#num").value>=5){
+		alert("每个订单数量不能超过5台！");
+	}else{
+		hh("#num").value=parseInt(hh("#num").value)+1;
+		hh("#zongjia").innerHTML=danjia*hh("#num").value;
+	}
+}
+hh("#jian").onclick=function(){
+	if(hh("#num").value<=1){
+		hh("#num").value=1;
+		hh("#zongjia").innerHTML=danjia;
+	}else{
+		hh("#num").value=hh("#num").value-1;
+		hh("#zongjia").innerHTML=danjia*hh("#num").value;
+	}
+}
+ 
 
 function hh(str){
 	if(str[0]=="#"){

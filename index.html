@@ -23,6 +23,13 @@
 					<a href="login.html">原账号登录</a>
 					<a href="register.html">注册</a>
 				</div>
+				<div id="wdzh" class="wdzh">
+					Hi,amigo用户:
+					<span id="zhanghu" class="zhanghu">157****2418</span>
+					<a class="zh" href="#">我的账户</a>
+					&nbsp;|&nbsp;
+					<a id="tuichu" class="tuichu" href="#">退出</a>
+				</div>
 			</div>
 			<div class="header2">
 				<a href="#"><div class="logo"></div></a>
@@ -416,34 +423,5 @@
 		</div>
 	</body>
 </html>
+<script src="js/cookieTools.js"></script>
 <script src="js/index.js"></script>
-<!--<script src="js/cookieTools.js"></script>
-<script type="text/javascript">
-	window.onload=function(){
-		showUser();
-		$("#btnLogout").onclick=function(){
-			removeCookie("username");
-			showUser();
-		}
-	}
-	function showUser(){
-		let username=getCookie("username");
-		if(username!=null){
-			$("#welcomeBox").firstElementChild.innerHTML=username;
-			$("#welcomeBox").style.display="block";
-			$("#loginBox").style.display="none";
-		}else{
-			$("#welcomeBox").style.display="none";
-			$("#loginBox").style.display="block";
-		}
-	}
-	function $(str){
-		if(str.charAt(0)=="#"){
-			return document.getElementById(str.substring(1));
-		}else if(str.charAt(0)=="."){
-			return document.getElementsByClassName(str.substring(1));
-		}else{
-			return document.getElementsByTagName(str);
-		}
-	}
-</script>-->

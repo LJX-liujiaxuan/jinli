@@ -62,6 +62,24 @@ window.onload=function(){
 			right();
 		}
     }
+	
+	//账户显示和退出
+	showUser();
+	$("#tuichu").onclick=function(){
+		removeCookie("username");
+		showUser();
+	}
+}
+function showUser(){
+	let username=getCookie("username");
+	if(username!=null){
+		$("#zhanghu").innerHTML=username;
+		$("#wdzh").style.display="block";
+		$("#dl").style.display="none";
+	}else{
+		$("#wdzh").style.display="none";
+		$("#dl").style.display="block";
+	}
 }
 function left(){ 
     let outIndex = index;
@@ -151,24 +169,54 @@ $("#huaguodiv").onmouseleave=function(){
 
 //购物车下拉菜单
 $("#gwc").onmouseenter=function(){
-	$("#gwc").style=`
-		border-left:1px solid #e7e7e7;
-		border-right:1px solid #e7e7e7;
-	`;
-	$("#dl").style=`
-		border-bottom:1px solid #e7e7e7;
-	`;
-	$("#ggdiv").style.display="block";
+	let pddl=$("#dl").style.display;
+	if(pddl=="block"){
+		$("#gwc").style=`
+			border-left:1px solid #e7e7e7;
+			border-right:1px solid #e7e7e7;
+		`;
+		$("#dl").style=`
+			border-bottom:1px solid #e7e7e7;
+			display:block;
+		`;
+		$("#ggdiv").style.display="block";
+	}else{
+		$("#gwc").style=`
+			border-left:1px solid #e7e7e7;
+			border-right:1px solid #e7e7e7;
+		`;
+		$("#wdzh").style=`
+			border-bottom:1px solid #e7e7e7;
+			display:block;
+		`;
+		$("#ggdiv").style.display="block";
+	}
+	
 }
 $("#gwc").onmouseleave=function(){
-	$("#gwc").style=`
-		border-left:none;
-		border-right:none;
-	`;
-	$("#dl").style=`
-		border-bottom:none;
-	`;
-	$("#ggdiv").style.display="none";
+	let pddl=$("#dl").style.display;
+	if($("#dl").style.display=="block"){
+		$("#gwc").style=`
+			border-left:none;
+			border-right:none;
+		`;
+		$("#dl").style=`
+			border-bottom:none;
+			display:block;
+		`;
+		$("#ggdiv").style.display="none";
+	}else{
+		$("#gwc").style=`
+			border-left:none;
+			border-right:none;
+		`;
+		$("#wdzh").style=`
+			border-bottom:none;
+			display:block;
+		`;
+		$("#ggdiv").style.display="none";
+	}
+	
 }
 
 function $(str){
