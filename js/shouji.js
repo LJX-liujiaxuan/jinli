@@ -121,3 +121,32 @@ function hh(str){
 		return document.getElementsByTagName(str);
 	}
 }
+
+$.get("php/getGoodsList.php",function(data){
+	let htmlStr="";
+    let dataJson = JSON.parse(data);
+
+    for(let i=0;i<dataJson.length;i++){
+
+        htmlStr+=` 
+        	<li class="imglistli">
+        		<a href="spxq-亮点.html"><img src="${dataJson[i].goodsImg}"/></a>
+				<p class="p1">
+					<a href="spxq-亮点.html">
+						${dataJson[i].goodsName}
+						<span class="miaoshu">${dataJson[i].goodsDesc}</span>
+					</a>
+				</p>
+				<p class="p2">
+					<span class="xianjia">￥${dataJson[i].goodsPrice}</span>
+				</p>
+				<div class="yincang">
+					<p class="yincangp">${dataJson[i].goodsDesc}</p>
+					<a class="yincanga" href="spxq-亮点.html"></a>
+				</div>
+			</li>
+        `;
+    }
+    console.log(htmlStr);
+    hh("#imglist").innerHTML = htmlStr;
+});

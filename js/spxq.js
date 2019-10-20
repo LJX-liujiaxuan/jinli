@@ -136,6 +136,31 @@ function showUser(){
 }
 
 
+hh("#goumai").onclick=function(){
+	if(hh("#zhanghu").innerHTML==""){
+		alert("请先登录或者注册账户！");
+	}else{
+		let xhr=new XMLHttpRequest();
+		xhr.open("post","php/addShoppingCart.php",true);
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4 && xhr.status==200){
+				if(xhr.responseText=="0"){
+					hh("#tjsb").innerHTML="添加购物车失败";
+					hh("#tjsb").style.display="block";
+				}else if(xhr.responseText=="1"){
+					hh("#tjsb").innerHTML="添加购物车成功";
+					hh("#tjsb").style.display="block";
+				}
+			}
+		}
+		//post方式：设置请求头
+		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		//post方式：把传给服务器端数据（键值对）放在send函数的参数里
+		let sendstr=`vipName=${hh("#zhanghu").innerHTML}&goodsId=${001}&goodsCount=${hh("#num").value}`;
+		xhr.send(sendstr);
+	}
+}
+
 
 function hh(str){
 	if(str[0]=="#"){

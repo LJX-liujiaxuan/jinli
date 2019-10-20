@@ -1,16 +1,16 @@
 let panduan=true;
-$("#dianji").onclick=function(){
+hh("#dianji").onclick=function(){
 	if(panduan){
-		$("#dianji").src="img/register/selected.png";
+		hh("#dianji").src="img/register/selected.png";
 		panduan=false;
 	}else{
-		$("#dianji").src="img/register/square.png";
+		hh("#dianji").src="img/register/square.png";
 		panduan=true;
 	}
 }
 
 window.onload=function(){
-	$("#dong").style=`
+	hh("#dong").style=`
 		left:0;
 		opacity: 1;
 		transition: all ease-in .4s;
@@ -18,38 +18,38 @@ window.onload=function(){
 	yanzhengma();
 }
 
-$("#zhuce").onclick=function(){
-	$("#gb1").innerHTML="注册";
-	$("#gb1").style=`
+hh("#zhuce").onclick=function(){
+	hh("#gb1").innerHTML="注册";
+	hh("#gb1").style=`
 		color:#888888;
 		font-size:20px;
 	`;
-	$("#gb2").href="register.html";
-	$("#gbspan").innerHTML="登录";
-	$("#gbspan").style=`
+	hh("#gb2").href="register.html";
+	hh("#gbspan").innerHTML="登录";
+	hh("#gbspan").style=`
 		color:#ff9000;
 		font-size:20px;
 	`;
-	$("#gbimg").src="img/register/icon2.jpg"; 
-	$("#zcul").style.display="flex";
-	$("#zc").style=`
+	hh("#gbimg").src="img/register/icon2.jpg"; 
+	hh("#zcul").style.display="flex";
+	hh("#zc").style=`
 		left:0;
 		opacity: 1;
 		transition: all ease-in .4s;
 	`;
 	
-	$("#dong").style.display="none";
+	hh("#dong").style.display="none";
 }
 
-$("#ljdl").onclick=function(){
-	if($("#sjh").value==""){
-		$("#tishi").innerHTML="请输入手机号";
-		$("#tishi").style.display="block";
+hh("#ljdl").onclick=function(){
+	if(hh("#sjh").value==""){
+		hh("#tishi").innerHTML="请输入手机号";
+		hh("#tishi").style.display="block";
 		return false;
 	}
-	if($("#mm").value==""){
-		$("#tishi").innerHTML="请输入密码";
-		$("#tishi").style.display="block";
+	if(hh("#mm").value==""){
+		hh("#tishi").innerHTML="请输入密码";
+		hh("#tishi").style.display="block";
 		return false;
 	}
 	
@@ -64,55 +64,55 @@ $("#ljdl").onclick=function(){
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState==4 && xhr.status==200){
 			if(xhr.responseText=="1"){
-				addCookie("username",$("#sjh").value,shijian);
+				addCookie("username",hh("#sjh").value,shijian);
 				location.href="index.html";
 			}else{
-				$("#tishi").innerHTML="亲，用户名或者密码不对";
+				hh("#tishi").innerHTML="亲，用户名或者密码不对";
 			}
 		}
 	}
 	xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	let sendstr = `username=${$("#sjh").value}&userpass=${$("#mm").value}`;
+	let sendstr = `username=${hh("#sjh").value}&userpass=${hh("#mm").value}`;
 	xhr.send(sendstr);
 	
 }
-$("#mm").onfocus=function(){
+hh("#mm").onfocus=function(){
 	setInterval(()=>{
-        let mm=$("#mm").value;
+        let mm=hh("#mm").value;
 		if(mm.length==0){
-			$("#mmpd").style.display="none";
+			hh("#mmpd").style.display="none";
 		}else if(mm.length<3){
-			$("#mmpd").src="img/register/delete.png";
-			$("#mmpd").style.display="block";
+			hh("#mmpd").src="img/register/delete.png";
+			hh("#mmpd").style.display="block";
 		}else{
-			$("#mmpd").src="img/register/correct.png";
-			$("#mmpd").style.display="block";
+			hh("#mmpd").src="img/register/correct.png";
+			hh("#mmpd").style.display="block";
 		}
     },500);
 }
-$("#xyb").onclick=function(){
-	if($("#sjh2").value==""){
-		$("#tishi2").innerHTML="请输入手机号";
-		$("#tishi2").style.display="block";
+hh("#xyb").onclick=function(){
+	if(hh("#sjh2").value==""){
+		hh("#tishi2").innerHTML="请输入手机号";
+		hh("#tishi2").style.display="block";
 		return false;
 	}
-	if($("#mima").value==""){
-		$("#tishi2").innerHTML="请输入密码";
-		$("#tishi2").style.display="block";
+	if(hh("#mima").value==""){
+		hh("#tishi2").innerHTML="请输入密码";
+		hh("#tishi2").style.display="block";
 		return false;
 	}
-	if($("#mimaqr").value==""){
-		$("#tishi2").innerHTML="请输入确认密码";
-		$("#tishi2").style.display="block";
+	if(hh("#mimaqr").value==""){
+		hh("#tishi2").innerHTML="请输入确认密码";
+		hh("#tishi2").style.display="block";
 		return false;
 	}
-	if($("#yzm").value==""){
-		$("#tishi2").innerHTML="请输入图形验证码";
-		$("#tishi2").style.display="block";
+	if(hh("#yzm").value==""){
+		hh("#tishi2").innerHTML="请输入图形验证码";
+		hh("#tishi2").style.display="block";
 		return false;
 	}
 	let lj="http://localhost/test/jinli/img/register/delete.png";
-	if($("#sjhpd").src==lj || $("#mimapd").src==lj || $("#qrpd").src==lj){
+	if(hh("#sjhpd").src==lj || hh("#mimapd").src==lj || hh("#qrpd").src==lj){
 		return false;
 	}
 	
@@ -121,77 +121,77 @@ $("#xyb").onclick=function(){
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState==4 && xhr.status==200){
 			if(xhr.responseText=="-1"){
-				$("#tishi2").innerHTML="用户名被人使用";
-				$("#tishi2").style.display="block";
+				hh("#tishi2").innerHTML="用户名被人使用";
+				hh("#tishi2").style.display="block";
 			}else if(xhr.responseText=="0"){
-				$("#tishi2").innerHTML="注册失败";
-				$("#tishi2").style.display="block";
+				hh("#tishi2").innerHTML="注册失败";
+				hh("#tishi2").style.display="block";
 			}else if(xhr.responseText=="1"){
-				$("#tishi2").innerHTML="注册成功，请登录";
-				$("#tishi2").style.display="block";
+				hh("#tishi2").innerHTML="注册成功，请登录";
+				hh("#tishi2").style.display="block";
 			}
 		}
 	}
 	//post方式：设置请求头
 	xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 	//post方式：把传给服务器端数据（键值对）放在send函数的参数里
-	let sendstr=`username=${$("#sjh2").value}&userpass=${$("#mima").value}`;
+	let sendstr=`username=${hh("#sjh2").value}&userpass=${hh("#mima").value}`;
 	xhr.send(sendstr);
 }
-$("#sjh2").onfocus=function(){
+hh("#sjh2").onfocus=function(){
 	setInterval(()=>{
-        let mm=$("#sjh2").value;
+        let mm=hh("#sjh2").value;
 		if(mm.length==0){
-			$("#sjhpd").style.display="none";
+			hh("#sjhpd").style.display="none";
 		}else if(mm.length==11){
-			$("#sjhpd").src="img/register/correct.png";
-			$("#sjhpd").style.display="block";
+			hh("#sjhpd").src="img/register/correct.png";
+			hh("#sjhpd").style.display="block";
 		}else{
-			$("#sjhpd").src="img/register/delete.png";
-			$("#sjhpd").style.display="block";
+			hh("#sjhpd").src="img/register/delete.png";
+			hh("#sjhpd").style.display="block";
 		}
     },500);
 }
-$("#mima").onfocus=function(){
+hh("#mima").onfocus=function(){
 	setInterval(()=>{
-        let mm=$("#mima").value;
+        let mm=hh("#mima").value;
 		if(mm.length==0){
-			$("#mimapd").style.display="none";
+			hh("#mimapd").style.display="none";
 		}else if(mm.length>6){
-			$("#mimapd").src="img/register/correct.png";
-			$("#mimapd").style.display="block";
+			hh("#mimapd").src="img/register/correct.png";
+			hh("#mimapd").style.display="block";
 		}else{
-			$("#mimapd").src="img/register/delete.png";
-			$("#mimapd").style.display="block";
+			hh("#mimapd").src="img/register/delete.png";
+			hh("#mimapd").style.display="block";
 		}
     },500);
 }
-$("#mimaqr").onfocus=function(){
+hh("#mimaqr").onfocus=function(){
 	setInterval(()=>{
-        let mm=$("#mimaqr").value;
-        let mima=$("#mima").value;
+        let mm=hh("#mimaqr").value;
+        let mima=hh("#mima").value;
         if(mm.length==0){
-        	$("#qrpd").style.display="none";
+        	hh("#qrpd").style.display="none";
         }else if(mm==mima){
-			$("#qrpd").src="img/register/correct.png";
-			$("#qrpd").style.display="block";
+			hh("#qrpd").src="img/register/correct.png";
+			hh("#qrpd").style.display="block";
 		}else{
-			$("#qrpd").src="img/register/delete.png";
-			$("#qrpd").style.display="block";
+			hh("#qrpd").src="img/register/delete.png";
+			hh("#qrpd").style.display="block";
 		}
     },500);
 }
-$("#yzm").onfocus=function(){
+hh("#yzm").onfocus=function(){
 	setInterval(()=>{
-       	let mm=$("#yzm").value;
+       	let mm=hh("#yzm").value;
 		if(mm.length==0){
-        	$("#yzmpd").style.display="none";
+        	hh("#yzmpd").style.display="none";
         }else if(mm==str){
-			$("#yzmpd").src="img/register/correct.png";
-			$("#yzmpd").style.display="block";
+			hh("#yzmpd").src="img/register/correct.png";
+			hh("#yzmpd").style.display="block";
 		}else{
-			$("#yzmpd").src="img/register/delete.png";
-			$("#yzmpd").style.display="block";
+			hh("#yzmpd").src="img/register/delete.png";
+			hh("#yzmpd").style.display="block";
 		}
     },500);
 }
@@ -204,11 +204,11 @@ function yanzhengma(){
 		let index=parseInt(Math.random()*10);
 		str+=index;
 	}
-	$("#hygspan").innerHTML=str;
-	$("#hygspan").style.backgroundColor = giveColor();
-	$("#hygspan").style.color = giveColor();
+	hh("#hygspan").innerHTML=str;
+	hh("#hygspan").style.backgroundColor = giveColor();
+	hh("#hygspan").style.color = giveColor();
 }
-$("#hyg").onclick=function(){
+hh("#hyg").onclick=function(){
 	yanzhengma();
 }
 function getColor(){
@@ -228,7 +228,7 @@ function giveColor(){
 
 //function checkuser(obj){
 //	let xhr=new XMLHttpRequest();
-//	xhr.open("get","php/regSave.php?username="+$("#sjh2").value,true);
+//	xhr.open("get","php/regSave.php?username="+hh("#sjh2").value,true);
 //	xhr.onreadystatechange=function(){
 //		if(xhr.readyState==4 && xhr.status==200){
 //			obj.nextElementSibling.innerHTML=xhr.responseText;
@@ -237,7 +237,7 @@ function giveColor(){
 //	xhr.send();
 //}
 
-function $(str){
+function hh(str){
 	if(str[0]=="#"){
 		return document.getElementById(str.substring(1));
 	}else if(str[0]=="."){
