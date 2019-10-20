@@ -1,27 +1,58 @@
 //购物车下拉菜单
 hh("#gwc").onmouseenter=function(){
-	hh("#gwc").style=`
-		border-left:1px solid #e7e7e7;
-		border-right:1px solid #e7e7e7;
-	`;
-	hh("#dl").style=`
-		border-bottom:1px solid #e7e7e7;
-	`;
-	hh("#ggdiv").style.display="block";
+	let pddl=hh("#dl").style.display;
+	if(pddl=="block"){
+		hh("#gwc").style=`
+			border-left:1px solid #e7e7e7;
+			border-right:1px solid #e7e7e7;
+		`;
+		hh("#dl").style=`
+			border-bottom:1px solid #e7e7e7;
+			display:block;
+		`;
+		hh("#ggdiv").style.display="block";
+	}else{
+		hh("#gwc").style=`
+			border-left:1px solid #e7e7e7;
+			border-right:1px solid #e7e7e7;
+		`;
+		hh("#wdzh").style=`
+			border-bottom:1px solid #e7e7e7;
+			display:block;
+		`;
+		hh("#ggdiv").style.display="block";
+	}
+	
 }
 hh("#gwc").onmouseleave=function(){
-	hh("#gwc").style=`
-		border-left:none;
-		border-right:none;
-	`;
-	hh("#dl").style=`
-		border-bottom:none;
-	`;
-	hh("#ggdiv").style.display="none";
+	let pddl=hh("#dl").style.display;
+	if(hh("#dl").style.display=="block"){
+		hh("#gwc").style=`
+			border-left:none;
+			border-right:none;
+		`;
+		hh("#dl").style=`
+			border-bottom:none;
+			display:block;
+		`;
+		hh("#ggdiv").style.display="none";
+	}else{
+		hh("#gwc").style=`
+			border-left:none;
+			border-right:none;
+		`;
+		hh("#wdzh").style=`
+			border-bottom:none;
+			display:block;
+		`;
+		hh("#ggdiv").style.display="none";
+	}
+	
 }
 
+
 let danjia=hh("#zongjia").innerHTML;
-console.log(danjia);
+//console.log(danjia);
 //总价计算
 hh("#jia").onclick=function(){
 	if(hh("#num").value>=5){
@@ -42,15 +73,6 @@ hh("#jian").onclick=function(){
 }
  
 
-function hh(str){
-	if(str[0]=="#"){
-		return document.getElementById(str.substring(1));
-	}else if(str[0]=="."){
-		return document.getElementsByClassName(str.substring(1));
-	}else{
-		return document.getElementsByTagName(str);
-	}
-}
 
 //导航栏吸顶
 $(function () {
@@ -89,6 +111,38 @@ $(function(){
 hh("#shitanchu").onclick=function(){
 	hh("#tanchu").style.display="block";
 }
-hh("#tuichu").onclick=function(){
+hh("#tuichu2").onclick=function(){
 	hh("#tanchu").style.display="none";
 } 
+
+window.onload=function(){
+	//账户显示和退出
+	showUser();
+	hh("#tuichu").onclick=function(){
+		removeCookie("username");
+		showUser();
+	}
+}
+function showUser(){
+	let username=getCookie("username");
+	if(username!=null){
+		hh("#zhanghu").innerHTML=username;
+		hh("#wdzh").style.display="block";
+		hh("#dl").style.display="none";
+	}else{
+		hh("#wdzh").style.display="none";
+		hh("#dl").style.display="block";
+	}
+}
+
+
+
+function hh(str){
+	if(str[0]=="#"){
+		return document.getElementById(str.substring(1));
+	}else if(str[0]=="."){
+		return document.getElementsByClassName(str.substring(1));
+	}else{
+		return document.getElementsByTagName(str);
+	}
+}
