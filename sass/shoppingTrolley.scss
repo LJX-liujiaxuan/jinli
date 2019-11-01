@@ -11,78 +11,113 @@ ul li{
 
 /*header*/
 .header{
-	width: 100%;
-	border-bottom: 3px solid #cccccc;
-	position: sticky;
-	left: 0;
-	top: 0;
-	z-index: 5;
-	background: white;
-	/*position: relative;*/
+    width: 100%;
+    border-bottom: 3px solid #cccccc;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    background: white;
+    /*position: relative;*/
 }
 .header1{
-	width: 1191px;
-	height: 38px;
-	margin: 0 auto;
-	line-height: 38px;
+    width: 1191px;
+    height: 38px;
+    margin: 0 auto;
+    line-height: 38px;
+    position: relative;
 }
 .header .dl{
-	float: right;
-	padding-right: 10px;
-	display: inline-block;
-	height: 32px;
+    width: 256px;
+    height: 27px;
+    position: absolute;
+    top: 5px;
+    right: 100px;
+    font-size: 12px;
+    color: #9f9f9f;
+    line-height: 32px;
+    padding-right: 10px;
+    text-align: right;
+//  border-bottom: none;
+//  display: block;
 }
 .header1 .dl a{
-	font-size: 12px;
-	line-height: 12px;
-	color: #9f9f9f;
-	padding: 0 9px;
-	border-right: 2px solid #e7e7e7;
+    font-size: 12px;
+    line-height: 12px;
+    color: #9f9f9f;
+    padding: 0 9px;
+    border-right: 2px solid #e7e7e7;
 }
 .header1 .dl a:first-child{
-	color: #ef4222;
+    color: #ef4222;
 }
 .header1 .dl a:last-child{
-	border-right: none;
+    border-right: none;
 }
 .header1 .dl a:hover{
-	color: #ef4222;
+    color: #ef4222;
+}
+.header .wdzh{
+    width: 256px;
+    height: 27px;
+    position: absolute;
+    top: 5px;
+    right: 100px;
+    font-size: 12px;
+    color: #9f9f9f;
+    line-height: 32px;
+    padding-right: 10px;
+    display: none;
+//  background: pink; 
+}
+.wdzh .zh{
+    color: #ef4222;
+}
+.wdzh .tuichu{
+    color: #9f9f9f;
+}
+.wdzh .tuichu:hover{
+    color: #ef4222;
 }
 .header1 .gwc{
-	display: inline-block;
-	float: right;
-	margin-right: 10px;
-	height: 32px;
-	/*box-sizing: border-box; */    /*怪异盒模型*/
+    display: inline-block;
+    float: right;
+    margin-right: 10px;
+    height: 32px;
+    /*box-sizing: border-box; */    /*怪异盒模型*/
 }
 .header1 .gwc .gwca:hover .gg{
-	color: #ef4222;
+    color: #ef4222;
+}
+.header1 .gwc .gwca:hover .cc{
+    background: url(../img/1.png) no-repeat -255px 0;
 }
 .header1 .gwc .gg{
-	font-size: 12px;
-	line-height: 12px;
-	color: #9f9f9f;
+    font-size: 12px;
+    line-height: 12px;
+    color: #9f9f9f;
 }
 .header1 .gwc .cc{
-	display: inline-block;
-	width: 25px;
-	height: 25px;
-	background: url(../img/1.png) no-repeat -209px 0;
-	margin-top: 10px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: url(../img/1.png) no-repeat -209px 0;
+    margin-top: 10px;
 }
 .header1 .gwc .ww{
-	color: #ef4222;
+    color: #ef4222;
 }
 .header1 .gwc .gwcz{
-	width: 52px;
-	height: 30px;
-	display: inline-block;
-	position: relative;
-	top: -8px;
-	left: -4px;
-	margin-left: 0;
-	position: relative;
-	padding-right: 6px;
+    width: 52px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    top: -8px;
+    left: -4px;
+    margin-left: 0;
+    position: relative;
+    padding-right: 6px;
+//  box-sizing: border-box;
 }
 .header2{
 	width: 1191px;
@@ -219,6 +254,31 @@ ul li{
 .trolley .go .gogouwu:hover{
     background: url(../img/gouwuche/bg.png) no-repeat 0px -50px;
 }
+
+.mysp{
+    width: 1190px;
+    overflow: hidden;
+    background: pink;
+}
+.mysp .left{
+    float: left;
+}
+.mysp .left img{
+    width: 300px;
+    height: 300px;
+}
+.mysp .right{
+    float: right;
+    background: skyblue;
+    h1{
+        color: black;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: normal;
+    }
+}
+
+
 .zjll{
     width: 1190px;
     background: white;
